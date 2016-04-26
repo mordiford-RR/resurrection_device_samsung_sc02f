@@ -460,7 +460,7 @@ on post-fs-data
     setprop ro.3LM.oem_sd_encryption 1
     setprop ro.3LM.oem_manifest 3
 
-# JPN: For MobileTV [ISDBT] \android\device\samsung\hltedcm\init.hltedcm.rc
+# JPN: For MobileTV [ISDBT] \android\device\samsung\sc02f\init.sc02f.rc
     mkdir /data/one-seg 0775 system system
     chown system system /data/one-seg
     chmod 0775 /data/one-seg
