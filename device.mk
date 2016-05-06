@@ -151,3 +151,7 @@ PRODUCT_COPY_FILES += \
 
 # Common msm8974
 $(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
+
+# aojp common
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
+
