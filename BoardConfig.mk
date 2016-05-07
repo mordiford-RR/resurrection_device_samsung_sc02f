@@ -91,7 +91,6 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 322122752
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(LOCAL_PATH)/power/power_ext.c
 
-#TARGET_RECOVERY := twrp
 # Recovery
 ifneq ($(TARGET_RECOVERY),twrp)
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
@@ -104,6 +103,7 @@ BOARD_RECOVERY_SWIPE := true
 BOARD_USES_MMCUTILS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
 # TWRP Recovery
 ifeq ($(TARGET_RECOVERY),twrp)
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -113,13 +113,14 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.debuggable=1 \
     persist.sys.usb.config=adb
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.twrp
-DEVICE_RESOLUTION := 1080x1920
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-TW_THEME := portrait_hdpi
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun0/file
 # BRIGHTNESS causes twrp not booting up
 #TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.190/leds/lcd-backlight/brightness"
 #TW_MAX_BRIGHTNESS := 255
