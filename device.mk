@@ -82,6 +82,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/sec_e-pen.idc:system/usr/idc/sec_e-pen.idc
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \
