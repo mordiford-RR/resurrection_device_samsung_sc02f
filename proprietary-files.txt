@@ -365,8 +365,9 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
-# Radio (N9005)
+# Radio (N900)
 bin/efsks
+bin/ds_fmc_appd
 bin/ks
 bin/qcks
 bin/qmuxd
