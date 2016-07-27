@@ -494,4 +494,20 @@ public class SamsungQcomRIL extends RIL {
         return ret;
     }
 
+
+    @Override
+    public void
+    setupDataCall(String radioTechnology, String profile, String apn,
+            String user, String password, String authType, String protocol,
+            Message result) {
+
+        super.setupDataCall(radioTechnology, profile, apn, user, password,
+                    authType, protocol, result);
+
+        try {
+            int prefNwType = Integer.parseInt(radioTechnology)-2;
+            setPreferredNetworkType(prefNwType, null);
+        } catch (NumberFormatException nfe) {
+        }
+    }
 }
