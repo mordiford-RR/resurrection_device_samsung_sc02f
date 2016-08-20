@@ -21,9 +21,6 @@ $(call inherit-product-if-exists, vendor/samsung/sc02f/sc02f-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-ifeq ($(TARGET_CUSTOM_ROM),RR)
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay_rr
-endif
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
