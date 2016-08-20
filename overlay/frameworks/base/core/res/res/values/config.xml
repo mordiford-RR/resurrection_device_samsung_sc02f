@@ -359,4 +359,6 @@
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
+    <!-- Enable RR Hardware key pref -->
+    <bool name="config_hwKeysPref">true</bool>
 </resources>
